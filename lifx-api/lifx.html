@@ -12,6 +12,8 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
+
+  19 Apr 2021 - forked to add outputs from setState(s)
 -->
 
 <!--
@@ -133,7 +135,7 @@ RED.nodes.registerType("lifx-set-state", {
     fast: { value: false }
   },
   inputs: 1,
-  outputs: 0,
+  outputs: 1,
   icon: "light.png",
   color: "#FFFFFF",
   label: function() {
@@ -164,7 +166,7 @@ RED.nodes.registerType("lifx-set-states", {
     api: { value: "", type: "lifx-config" }
   },
   inputs: 1,
-  outputs: 0,
+  outputs: 1,
   icon: "light.png",
   color: "#FFFFFF",
   label: function() {
