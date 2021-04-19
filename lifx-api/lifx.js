@@ -12,6 +12,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * 19 Apr 2021 - forked to consider returning result of setState
+ *
  **/
 module.exports = function(RED) {
   "use strict";
@@ -210,6 +213,8 @@ module.exports = function(RED) {
           node.error(err);
           return;
         }
+        msg.payload = data;
+        node.send(msg);
       });
     });
   }
@@ -230,6 +235,8 @@ module.exports = function(RED) {
           node.error(err);
           return;
         }
+        msg.payload = data;
+        node.send(msg);
       });
     });
   }
